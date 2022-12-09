@@ -1475,7 +1475,7 @@ var Router = /*#__PURE__*/function () {
         if (etherIn) {
           methodName = 'swapExactETHForTokens'; // (address token, uint amountOutMin, address to, uint deadline)
 
-          args = [path[1], amountOut, to, deadline, pairType];
+          args = [path[path.length - 1], amountOut, to, deadline, pairType];
           value = amountIn;
         } else if (etherOut) {
           methodName = 'swapExactTokenForETH'; // (address token, uint amountIn, uint amountOutMin, address to, uint deadline)
