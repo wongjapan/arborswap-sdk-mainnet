@@ -21,7 +21,7 @@ export class Currency {
   public static readonly RBA: Currency = new Currency(18, 'RBA', 'RBA')
 
   public static readonly NATIVE = {
-    [ChainId.MAINNET]: Currency.ETHER,
+    [ChainId.ETHEREUM]: Currency.ETHER,
     [ChainId.BSC]: Currency.BNB,
     [ChainId.BSC_TESTNET]: Currency.BNB,
     [ChainId.ROBURNA]: Currency.RBA,
