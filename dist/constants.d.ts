@@ -1,9 +1,11 @@
 import JSBI from 'jsbi';
 export declare type BigintIsh = JSBI | number | string;
 export declare enum ChainId {
-    MAINNET = 56,
-    TESTNET = 97,
-    ROBURNA = 159
+    MAINNET = 1,
+    BSC = 56,
+    BSC_TESTNET = 97,
+    ROBURNA = 158,
+    ROBURNA_TESTNET = 159
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
@@ -20,28 +22,38 @@ export declare enum Rounding {
 }
 export declare const FACTORY_ADDRESS = "0x0438309c81376d90D191Ab2Cdd464716B3c69B54";
 export declare const FACTORY_ADDRESS_EXTERNAL = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73";
-export declare const FACTORY_ADDRESS_ROBURNA = "0x0de73FE9d848A68Aba41c3edcd2C69301a7f4573";
+export declare const FACTORY_ADDRESS_ROBURNA = "0xC0f0F040C03fA3e4E3C9511Ad2539526f986dF69";
+export declare const FACTORY_ADDRESS_ROBURNA_TESTNET = "0xa9c35896A518ce1DA9Bbe22cd2a71057E9D0cAA1";
 export declare const FACTORY_ADDRESS_MAP: {
+    1: string;
     56: string;
     97: string;
+    158: string;
     159: string;
 };
 export declare const EXTERNAL_FACTORY_ADDRESS_MAP: {
+    1: string;
     56: string;
     97: string;
+    158: string;
     159: string;
 };
 export declare const INIT_CODE_HASH = "0x2e26c6a371cb994ce7b30f334480a5782dff687140d5608ced830fc138a0ed7b";
 export declare const INIT_CODE_HASH_EXTERNAL = "0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5";
-export declare const INIT_CODE_HASH_ROBURNA = "0x2e26c6a371cb994ce7b30f334480a5782dff687140d5608ced830fc138a0ed7b";
+export declare const INIT_CODE_HASH_ROBURNA = "0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b";
+export declare const INIT_CODE_HASH_ROBURNA_TESTNET = "0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b";
 export declare const INIT_CODE_HASH_MAP: {
+    1: string;
     56: string;
     97: string;
+    158: string;
     159: string;
 };
 export declare const EXTERNAL_CODE_HASH_MAP: {
+    1: string;
     56: string;
     97: string;
+    158: string;
     159: string;
 };
 export declare const MINIMUM_LIQUIDITY: JSBI;

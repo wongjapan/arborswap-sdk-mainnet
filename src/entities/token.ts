@@ -68,23 +68,30 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     18,
-    'WBNB',
-    'Wrapped BNB',
-    'https://www.binance.org'
+    'WETH',
+    'Wrapped Ether'
   ),
-  [ChainId.TESTNET]: new Token(
-    ChainId.TESTNET,
+  [ChainId.BSC]: new Token(ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
+  [ChainId.BSC_TESTNET]: new Token(
+    ChainId.BSC_TESTNET,
     '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
     18,
     'WBNB',
-    'Wrapped BNB',
-    'https://www.binance.org'
+    'Wrapped BNB'
   ),
   [ChainId.ROBURNA]: new Token(
     ChainId.ROBURNA,
-    '0x238F5666A0f12c571B7B3fBd5b5a434146dFa0C5',
+    '0x86D1D92E543220Bd2F91Ec01694100043a25675A',
+    18,
+    'WRBA',
+    'Wrapped RBA',
+    'https://www.roburna.com'
+  ),
+  [ChainId.ROBURNA_TESTNET]: new Token(
+    ChainId.ROBURNA_TESTNET,
+    '0x38aed14869Df0B10abCE55b6de03Ae168b5c1eeF',
     18,
     'WRBA',
     'Wrapped RBA',

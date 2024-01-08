@@ -19,9 +19,11 @@ var providers = require('@ethersproject/providers');
 var _FACTORY_ADDRESS_MAP, _EXTERNAL_FACTORY_ADD, _INIT_CODE_HASH_MAP, _EXTERNAL_CODE_HASH_M, _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 97] = "TESTNET";
-  ChainId[ChainId["ROBURNA"] = 159] = "ROBURNA";
+  ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
+  ChainId[ChainId["BSC"] = 56] = "BSC";
+  ChainId[ChainId["BSC_TESTNET"] = 97] = "BSC_TESTNET";
+  ChainId[ChainId["ROBURNA"] = 158] = "ROBURNA";
+  ChainId[ChainId["ROBURNA_TESTNET"] = 159] = "ROBURNA_TESTNET";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -42,14 +44,16 @@ var _FACTORY_ADDRESS_MAP, _EXTERNAL_FACTORY_ADD, _INIT_CODE_HASH_MAP, _EXTERNAL_
 
 var FACTORY_ADDRESS = '0x0438309c81376d90D191Ab2Cdd464716B3c69B54';
 var FACTORY_ADDRESS_EXTERNAL = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73';
-var FACTORY_ADDRESS_ROBURNA = '0x0de73FE9d848A68Aba41c3edcd2C69301a7f4573';
-var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[exports.ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.TESTNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.ROBURNA] = FACTORY_ADDRESS_ROBURNA, _FACTORY_ADDRESS_MAP);
-var EXTERNAL_FACTORY_ADDRESS_MAP = (_EXTERNAL_FACTORY_ADD = {}, _EXTERNAL_FACTORY_ADD[exports.ChainId.MAINNET] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.TESTNET] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.ROBURNA] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD);
+var FACTORY_ADDRESS_ROBURNA = '0xC0f0F040C03fA3e4E3C9511Ad2539526f986dF69';
+var FACTORY_ADDRESS_ROBURNA_TESTNET = '0xa9c35896A518ce1DA9Bbe22cd2a71057E9D0cAA1';
+var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[exports.ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.BSC] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.BSC_TESTNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[exports.ChainId.ROBURNA] = FACTORY_ADDRESS_ROBURNA, _FACTORY_ADDRESS_MAP[exports.ChainId.ROBURNA_TESTNET] = FACTORY_ADDRESS_ROBURNA_TESTNET, _FACTORY_ADDRESS_MAP);
+var EXTERNAL_FACTORY_ADDRESS_MAP = (_EXTERNAL_FACTORY_ADD = {}, _EXTERNAL_FACTORY_ADD[exports.ChainId.MAINNET] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.BSC] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.BSC_TESTNET] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.ROBURNA] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD[exports.ChainId.ROBURNA_TESTNET] = FACTORY_ADDRESS_EXTERNAL, _EXTERNAL_FACTORY_ADD);
 var INIT_CODE_HASH = '0x2e26c6a371cb994ce7b30f334480a5782dff687140d5608ced830fc138a0ed7b';
 var INIT_CODE_HASH_EXTERNAL = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5';
-var INIT_CODE_HASH_ROBURNA = '0x2e26c6a371cb994ce7b30f334480a5782dff687140d5608ced830fc138a0ed7b';
-var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[exports.ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.TESTNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.ROBURNA] = INIT_CODE_HASH_ROBURNA, _INIT_CODE_HASH_MAP);
-var EXTERNAL_CODE_HASH_MAP = (_EXTERNAL_CODE_HASH_M = {}, _EXTERNAL_CODE_HASH_M[exports.ChainId.MAINNET] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.TESTNET] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.ROBURNA] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M);
+var INIT_CODE_HASH_ROBURNA = '0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b';
+var INIT_CODE_HASH_ROBURNA_TESTNET = '0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b';
+var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[exports.ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.BSC] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.BSC_TESTNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[exports.ChainId.ROBURNA] = INIT_CODE_HASH_ROBURNA, _INIT_CODE_HASH_MAP[exports.ChainId.ROBURNA_TESTNET] = INIT_CODE_HASH_ROBURNA_TESTNET, _INIT_CODE_HASH_MAP);
+var EXTERNAL_CODE_HASH_MAP = (_EXTERNAL_CODE_HASH_M = {}, _EXTERNAL_CODE_HASH_M[exports.ChainId.MAINNET] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.BSC] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.BSC_TESTNET] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.ROBURNA] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M[exports.ChainId.ROBURNA_TESTNET] = INIT_CODE_HASH_EXTERNAL, _EXTERNAL_CODE_HASH_M);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -359,30 +363,85 @@ function sortedInsert(items, add, maxSize, comparator) {
   }
 }
 
+var _Currency$NATIVE;
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
  *
  * The only instance of the base class `Currency` is Ether.
  */
 
-var Currency =
-/**
- * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
- * @param decimals decimals of the currency
- * @param symbol symbol of the currency
- * @param name of the currency
- */
-function Currency(decimals, symbol, name) {
-  validateSolidityTypeInstance(JSBI.BigInt(decimals), SolidityType.uint8);
-  this.decimals = decimals;
-  this.symbol = symbol;
-  this.name = name;
-};
+var Currency = /*#__PURE__*/function () {
+  /**
+   * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
+   * @param decimals decimals of the currency
+   * @param symbol symbol of the currency
+   * @param name of the currency
+   */
+  function Currency(decimals, symbol, name) {
+    validateSolidityTypeInstance(JSBI.BigInt(decimals), SolidityType.uint8);
+    this.decimals = decimals;
+    this.symbol = symbol;
+    this.name = name;
+  }
+
+  Currency.getNativeCurrency = function getNativeCurrency(chainId) {
+    if (!chainId) {
+      throw Error("No chainId " + chainId);
+    }
+
+    if (!(chainId in Currency.NATIVE)) {
+      throw Error("No native currency defined for chainId " + chainId);
+    }
+
+    return Currency.NATIVE[chainId];
+  };
+
+  Currency.getNativeCurrencySymbol = function getNativeCurrencySymbol(chainId) {
+    var nativeCurrency = this.getNativeCurrency(chainId);
+    return nativeCurrency.symbol;
+  };
+
+  Currency.getNativeCurrencyName = function getNativeCurrencyName(chainId) {
+    var nativeCurrency = this.getNativeCurrency(chainId);
+    return nativeCurrency.name;
+  };
+
+  var _proto = Currency.prototype;
+
+  _proto.getSymbol = function getSymbol(chainId) {
+    if (!chainId) {
+      return this === null || this === void 0 ? void 0 : this.symbol;
+    }
+
+    if ((this === null || this === void 0 ? void 0 : this.symbol) === 'ETH') {
+      return Currency.getNativeCurrencySymbol(chainId);
+    }
+
+    return this === null || this === void 0 ? void 0 : this.symbol;
+  };
+
+  _proto.getName = function getName(chainId) {
+    if (!chainId) {
+      return this === null || this === void 0 ? void 0 : this.name;
+    }
+
+    if ((this === null || this === void 0 ? void 0 : this.name) === 'Ether') {
+      return Currency.getNativeCurrencyName(chainId);
+    }
+
+    return this === null || this === void 0 ? void 0 : this.name;
+  };
+
+  return Currency;
+}();
 /**
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'BNB');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'ETH');
+Currency.BNB = /*#__PURE__*/new Currency(18, 'BNB', 'BNB');
+Currency.RBA = /*#__PURE__*/new Currency(18, 'RBA', 'RBA');
+Currency.NATIVE = (_Currency$NATIVE = {}, _Currency$NATIVE[exports.ChainId.MAINNET] = Currency.ETHER, _Currency$NATIVE[exports.ChainId.BSC] = Currency.BNB, _Currency$NATIVE[exports.ChainId.BSC_TESTNET] = Currency.BNB, _Currency$NATIVE[exports.ChainId.ROBURNA] = Currency.RBA, _Currency$NATIVE[exports.ChainId.ROBURNA_TESTNET] = Currency.RBA, _Currency$NATIVE);
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -449,7 +508,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.ROBURNA] = /*#__PURE__*/new Token(exports.ChainId.ROBURNA, '0x238F5666A0f12c571B7B3fBd5b5a434146dFa0C5', 18, 'WRBA', 'Wrapped RBA', 'https://www.roburna.com'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.BSC] = /*#__PURE__*/new Token(exports.ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSC_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.ROBURNA] = /*#__PURE__*/new Token(exports.ChainId.ROBURNA, '0x86D1D92E543220Bd2F91Ec01694100043a25675A', 18, 'WRBA', 'Wrapped RBA', 'https://www.roburna.com'), _WETH[exports.ChainId.ROBURNA_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.ROBURNA_TESTNET, '0x38aed14869Df0B10abCE55b6de03Ae168b5c1eeF', 18, 'WRBA', 'Wrapped RBA', 'https://www.roburna.com'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
