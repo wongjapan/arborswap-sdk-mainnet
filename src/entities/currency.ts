@@ -16,7 +16,7 @@ export class Currency {
   /**
    * The only instance of the base class `Currency`.
    */
-  public static readonly ETHER: Currency = new Currency(18, 'ETH', 'ETH')
+  public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
   public static readonly BNB: Currency = new Currency(18, 'BNB', 'BNB')
   public static readonly RBA: Currency = new Currency(18, 'RBA', 'RBA')
 
@@ -80,7 +80,7 @@ export class Currency {
       return this?.name
     }
 
-    if (this?.name === 'Ether') {
+    if (this?.name === 'ETH') {
       return Currency.getNativeCurrencyName(chainId)
     }
 
