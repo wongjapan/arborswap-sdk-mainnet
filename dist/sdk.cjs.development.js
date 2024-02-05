@@ -425,7 +425,7 @@ var Currency = /*#__PURE__*/function () {
       return this === null || this === void 0 ? void 0 : this.name;
     }
 
-    if ((this === null || this === void 0 ? void 0 : this.name) === 'ETH') {
+    if ((this === null || this === void 0 ? void 0 : this.name) === 'Ether') {
       return Currency.getNativeCurrencyName(chainId);
     }
 
