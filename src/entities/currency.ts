@@ -80,7 +80,7 @@ export class Currency {
       return this?.name
     }
 
-    if (this?.name === 'ETH') {
+    if (this?.name === 'Ether') {
       return Currency.getNativeCurrencyName(chainId)
     }
 
