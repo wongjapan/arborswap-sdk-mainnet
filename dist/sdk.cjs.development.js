@@ -438,7 +438,7 @@ var Currency = /*#__PURE__*/function () {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'RBA', 'RBA');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'ETH');
 Currency.BNB = /*#__PURE__*/new Currency(18, 'BNB', 'BNB');
 Currency.RBA = /*#__PURE__*/new Currency(18, 'RBA', 'RBA');
 Currency.NATIVE = (_Currency$NATIVE = {}, _Currency$NATIVE[exports.ChainId.ETHEREUM] = Currency.ETHER, _Currency$NATIVE[exports.ChainId.BSC] = Currency.BNB, _Currency$NATIVE[exports.ChainId.BSC_TESTNET] = Currency.BNB, _Currency$NATIVE[exports.ChainId.ROBURNA] = Currency.RBA, _Currency$NATIVE[exports.ChainId.ROBURNA_TESTNET] = Currency.RBA, _Currency$NATIVE);
