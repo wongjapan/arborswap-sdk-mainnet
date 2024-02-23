@@ -24,6 +24,7 @@ export declare const FACTORY_ADDRESS = "0x0438309c81376d90D191Ab2Cdd464716B3c69B
 export declare const FACTORY_ADDRESS_EXTERNAL = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73";
 export declare const FACTORY_ADDRESS_ROBURNA = "0xC0f0F040C03fA3e4E3C9511Ad2539526f986dF69";
 export declare const FACTORY_ADDRESS_ROBURNA_TESTNET = "0xa9c35896A518ce1DA9Bbe22cd2a71057E9D0cAA1";
+export declare const FACTORY_ADDRESS_BSC_TESTNET = "0x6725F303b657a9451d8BA641348b6761A6CC7a17";
 export declare const FACTORY_ADDRESS_MAP: {
     1: string;
     56: string;
@@ -42,6 +43,7 @@ export declare const INIT_CODE_HASH = "0x2e26c6a371cb994ce7b30f334480a5782dff687
 export declare const INIT_CODE_HASH_EXTERNAL = "0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5";
 export declare const INIT_CODE_HASH_ROBURNA = "0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b";
 export declare const INIT_CODE_HASH_ROBURNA_TESTNET = "0x568d807ff31b5c3ec99125e4aeff3b02ee98c66ff603152daee8b2e7d279b83b";
+export declare const INIT_CODE_HASH_BSC_TESTNET = "0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66";
 export declare const INIT_CODE_HASH_MAP: {
     1: string;
     56: string;
