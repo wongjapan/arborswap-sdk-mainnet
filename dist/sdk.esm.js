@@ -65,8 +65,9 @@ var TWO = /*#__PURE__*/JSBI.BigInt(2);
 var THREE = /*#__PURE__*/JSBI.BigInt(3);
 var FIVE = /*#__PURE__*/JSBI.BigInt(5);
 var TEN = /*#__PURE__*/JSBI.BigInt(10);
-var _100 = /*#__PURE__*/JSBI.BigInt(100);
-var FEES_NUMERATOR = /*#__PURE__*/JSBI.BigInt(9975);
+var _100 = /*#__PURE__*/JSBI.BigInt(100); // export const FEES_NUMERATOR = JSBI.BigInt(9975)
+
+var FEES_NUMERATOR = /*#__PURE__*/JSBI.BigInt(9925);
 var FEES_DENOMINATOR = /*#__PURE__*/JSBI.BigInt(10000);
 var SolidityType;
 
